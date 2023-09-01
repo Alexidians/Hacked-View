@@ -1,0 +1,27 @@
+<div id="ViewForm">
+<select id="webSelect">
+  <option value="youtube">Youtube</option>
+  <option value="google">Not Implemented</option>
+  <option value="roblox">Not Implemented</option>
+  <option value="spotify">Not Implemented</option>
+</select>
+<div id="hackSelect">
+ <input type="checkbox" id="disabledTypingCheckBox" value="Disabled Typing"></input>
+</div>
+<button onclick="view()">View</button>
+</div>
+<script>
+function view() {
+ var web = document.getElementById("webSelect").value
+ var viewFrame = document.getElementById("view")
+ document.getElementById("ViewForm").style.display = "none"
+ if(web == "youtube") {
+  viewFrame.src = "view/youtube.html"
+ }
+ if(document.getElementById("disabledTypingCheckbox").indeterminate) {
+  viewFrame.contentWindow.eval("var disabledTyping = document.createElement('script')")
+  viewFrame.contentWindow.eval("disabledTyping.src = "https://alexidians.github.io/Hacked-View/js/disabled-typing.js")
+ }
+}
+</script>
+<iframe id="view" style="display: none" width="100%" height="100%"></iframe>
