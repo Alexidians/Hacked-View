@@ -1,3 +1,8 @@
+/*var hackedBackground = document.createElement("link")
+hackedBackground.rel = "stylesheet"
+hackedBackground.href = "https://alexidians.github.io/Hacked-View/background/hacked.css"
+document.body.appendChild(hackedBackground)*/
+
 body {
  background-color: black
  color: green;
