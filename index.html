@@ -6,7 +6,7 @@
   <option value="spotify">Not Implemented</option>
 </select>
 <div id="hackSelect">
- <input type="checkbox" id="disabledTypingCheckBox" value="Disabled Typing"></input>
+ <input type="checkbox" id="disabledTypingCheckBox" name="Disabled Typing"></input>
 </div>
 <button onclick="view()">View</button>
 </div>
@@ -20,7 +20,7 @@ function view() {
  }
  if(document.getElementById("disabledTypingCheckbox").indeterminate) {
   viewFrame.contentWindow.eval("var disabledTyping = document.createElement('script')")
-  viewFrame.contentWindow.eval("disabledTyping.src = "https://alexidians.github.io/Hacked-View/js/disable-typing.js")
+  viewFrame.contentWindow.eval("disabledTyping.src = 'https://alexidians.github.io/Hacked-View/js/disable-typing.js')
  }
 }
 </script>
