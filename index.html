@@ -19,8 +19,8 @@ function view() {
   viewFrame.src = "view/youtube.html"
  }
  if(document.getElementById("disabledTypingCheckbox").indeterminate) {
-  viewFrame.contentWindow.eval("var disabledTyping = document.createElement('script')")
-  viewFrame.contentWindow.eval("disabledTyping.src = 'js/disable-typing.js')
+  var diabledTyping = viewFrame.contentWindow.document.createElement('script')
+  disabledTyping.src = "js/disable-typing.js"
  }
 }
 </script>
